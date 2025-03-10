@@ -1,11 +1,10 @@
-
 import java.util.Scanner;
 import java.util.Calendar;
 
 public class Parqueadero {
-    private static final int MAX_PUESTOS = 20; // Máximo número de puestos
-    private boolean[] puestosMotos = new boolean[MAX_PUESTOS]; // Arreglo para chequear si los puestos están ocupados
-    private Scanner scanner = new Scanner(System.in); // Scanner para leer entrada del usuario
+    int MAX_PUESTOS = 20; // Máximo número de puestos
+    boolean[] puestosMotos = new boolean[MAX_PUESTOS]; // Arreglo para chequear si los puestos están ocupados
+     Scanner scanner = new Scanner(System.in); // Scanner para leer entrada del usuario
 
     public static void main(String[] args) {
         Parqueadero parqueadero = new Parqueadero(); // Crear instancia de Parqueadero
@@ -54,7 +53,7 @@ public class Parqueadero {
         int puesto;
         // Manejar entrada de puesto
         while (true) {
-            while (scanner.hasNextInt()) {
+            while (!scanner.hasNextInt()) {
                 System.out.println("Entrada inválida. Debe ingresar un número.");
                 scanner.next(); // Limpiar entrada incorrecta
             }
