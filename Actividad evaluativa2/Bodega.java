@@ -5,8 +5,15 @@ public class Bodega extends Equipaje {
         super(peso, tamanio);
     }
 
-    
+    public Bodega(double precioBase) {
+        super(precioBase);
+    }
+
+    public Bodega() {
+        super();
+    }
+
     public double calcularPrecio() {
-        return super.calcularPrecio() + (peso * tamanio * CAPACIDAD);
+        return super.calcularPrecio() + (getPeso() * getTamanio() * CAPACIDAD);
     }
 }
