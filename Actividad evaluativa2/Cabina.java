@@ -5,8 +5,15 @@ public class Cabina extends Equipaje {
         super(peso, tamanio);
     }
 
-   
+    public Cabina(double precioBase) {
+        super(precioBase);
+    }
+
+    public Cabina() {
+        super();
+    }
+
     public double calcularPrecio() {
-        return super.calcularPrecio() + (peso * tamanio * TIEMPO);
+        return super.calcularPrecio() + (getPeso() * getTamanio() * TIEMPO);
     }
 }
